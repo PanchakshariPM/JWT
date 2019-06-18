@@ -14,7 +14,7 @@ mongoose.connect('mongodb://localhost:27017/jwt', { useCreateIndex: true, useNew
     .catch(err => console.log(err));
 
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: true }));
+// app.use(bodyParser.urlencoded({ extended: true }));
 app.use(morgan('dev'));
 
 app.use('/', require('./routes/api'));
